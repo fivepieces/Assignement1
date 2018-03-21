@@ -3,8 +3,8 @@
 #include <stdio.h>
 #include <vector>
 
-const int SCREEN_WIDTH = 640;
-const int SCREEN_HEIGHT = 480;
+const int SCREEN_WIDTH = 800;
+const int SCREEN_HEIGHT = 600;
 
 namespace scene {
 
@@ -28,6 +28,7 @@ namespace core
 		int init();
 		int Run();
 		void print();
+
 
 	private:
 

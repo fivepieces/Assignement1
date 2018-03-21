@@ -1,15 +1,21 @@
 #pragma once
 
-namespace scene {
-	class Scene
+namespace core {
+
+
+	class Manager
 	{
 	public:
-		Scene();
-		virtual ~Scene();
+		Manager();
+		~Manager();
+
 
 		bool init();
 		void update();
 		void draw() const;
 		bool shutdown();
 	};
+
 }
+
+
