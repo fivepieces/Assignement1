@@ -16,13 +16,15 @@
     <ClInclude Include="Input.h">
       <Filter>Header</Filter>
     </ClInclude>
-    <ClInclude Include="SystemManager.h">
-      <Filter>Header</Filter>
-    </ClInclude>
     <ClInclude Include="Manager.h">
       <Filter>Header</Filter>
     </ClInclude>
-    <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="SceneManager.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemManager.h">
+      <Filter>Header</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Engine.cpp">
@@ -40,13 +42,15 @@
     <ClCompile Include="Input.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="SystemManager.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
     <ClCompile Include="Manager.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="SceneManager.cpp" />
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="SystemManager.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header">
@@ -54,6 +58,9 @@
     </Filter>
     <Filter Include="Source">
       <UniqueIdentifier>{84ad3ca1-41ec-48b6-ab76-8b02e10987af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Managers">
+      <UniqueIdentifier>{6f2db5e2-3a5e-4411-8229-51c978755720}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

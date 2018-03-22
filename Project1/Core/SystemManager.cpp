@@ -1,9 +1,15 @@
 #include "SystemManager.h"
+#include "System.h"
+#include "Input.h"
+#include "Window.h"
 
 namespace core {
 
 	SystemManager::SystemManager()
 	{
+
+		systems.push_back(new Input());
+		systems.push_back(new Window());
 	}
 
 
@@ -11,9 +17,40 @@ namespace core {
 	{
 	}
 
-	int SystemManager::getSystem(SystemType type)
+	bool SystemManager::init()
 	{
-		return 0;
+		for (System* s : systems)
+		{
+			if (!s->init()) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	void SystemManager::update()
+	{
+		for (System* s : systems)
+		{
+			s->update();
+		}
+	}
+
+	void SystemManager::draw() const
+	{
+		for (System* s : systems)
+		{
+			s->draw();
+		}
+	}
+
+	bool SystemManager::shutdown()
+	{
+		for (System* s : systems)
+		{
+			s->shutdown();
+		}
+		return true;
 	}
 
 

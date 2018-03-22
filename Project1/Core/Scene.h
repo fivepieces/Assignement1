@@ -8,10 +8,10 @@ namespace scene {
 		Scene();
 		virtual ~Scene();
 
-		bool init();
-		void update();
-		void draw() const;
-		bool shutdown();
+		virtual bool init();
+		virtual void update();
+		virtual void draw() const;
+		virtual bool shutdown();
 
 
 		std::vector<class GameObject*> gameObjects;

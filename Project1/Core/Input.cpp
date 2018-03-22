@@ -1,15 +1,27 @@
 #include "Input.h"
-
+#include <SDL.h>
 namespace core {
-
-	Window::Window() :
-		System(SystemType::WINDOW)
+	Input::Input() :
+		System(SystemType::INPUT),
+		quitRequested(false)
 	{
-
 	}
 
-
-	Window::~Window()
+	Input::~Input()
 	{
+	}
+
+	void Input::update()
+	{
+		SDL_Event e;
+
+		while (SDL_PollEvent(&e) != 0)
+		{
+			if (e.type == SDL_QUIT)
+			{
+				quitRequested = true;
+			}
+		}
+
 	}
 }

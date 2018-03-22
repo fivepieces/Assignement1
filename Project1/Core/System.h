@@ -5,7 +5,8 @@ namespace core
 	enum class SystemType : unsigned __int8 {
 
 		WINDOW,
-		INPUT
+		INPUT,
+		TOTAL_SYSTEMS
 	};
 
 	class System
@@ -16,9 +17,9 @@ namespace core
 		System(SystemType st);
 		virtual ~System();
 
-		bool init();
-		void update();
-		void draw() const;
-		bool shutdown();
+		virtual bool init();
+		virtual void update();
+		virtual void draw() const;
+		virtual bool shutdown();
 	};
 }

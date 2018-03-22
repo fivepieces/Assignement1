@@ -2,7 +2,8 @@
 
 namespace core {
 
-
+	///Interfaces that define a manager
+	//TODO: make this a singleton?
 	class Manager
 	{
 	public:
@@ -10,10 +11,10 @@ namespace core {
 		~Manager();
 
 
-		bool init();
-		void update();
-		void draw() const;
-		bool shutdown();
+		virtual bool init() = 0;
+		virtual void update() = 0;
+		virtual void draw() const = 0;
+		virtual bool shutdown() = 0;
 	};
 
 }

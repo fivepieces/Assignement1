@@ -2,11 +2,16 @@
 #include "System.h"
 
 namespace core {
-	class Window : public System
+	class Input : public System
 	{
+		bool quitRequested;
 
 	public:
-		Window();
-		~Window();
+		Input();
+		~Input();
+
+		void update() override;
+
+		inline bool QuitRequested()const { return quitRequested; }
 	};
 }

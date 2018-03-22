@@ -14,21 +14,22 @@ namespace core {
 
 	}
 
-	bool System::init() {
-
-		return true;
+	bool System::init()
+	{
+		return false;
 	}
 
-	void System::update() {
-
+	void System::update()
+	{
 	}
 
-	void System::draw() const {
-
+	void System::draw() const
+	{
 	}
 
-	bool System::shutdown() {
-
-		return true;
+	bool System::shutdown()
+	{
+		return false;
 	}
+
 }

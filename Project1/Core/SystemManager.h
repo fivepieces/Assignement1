@@ -1,13 +1,20 @@
 #pragma once
-#include "System.h"
+#include "Manager.h"
+#include <vector>
 namespace core {
 
-	class SystemManager
+	std::vector<class System*> systems;
+	class SystemManager : public Manager
 	{
 	public:
 		SystemManager();
 		~SystemManager();
-		int getSystem(SystemType type);
+
+
+		 bool init();
+		 void update();
+		 void draw() const;
+		 bool shutdown();
 	};
 
 }
