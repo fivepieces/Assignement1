@@ -12,5 +12,8 @@ namespace scene
 		void update();
 		void draw() const;
 		bool shutdown();
+
+
 	};
+
 }

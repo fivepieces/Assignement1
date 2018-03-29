@@ -29,11 +29,15 @@ namespace core
 		//The window we'll be rendering to
 		SDL_Window* window = NULL;
 
-		//The surface contained by the window
 		SDL_Surface* screenSurface = NULL;
+
+		SDL_Rect *Viewport = new SDL_Rect;
+		
 
 		//The image we will load and show on the screen
 		SDL_Surface* picture = NULL;
+
+
 
 		Input inputSystem;
 
@@ -45,10 +49,15 @@ namespace core
 		int Run();
 
 
+		
+
 	private:
 
 		void update();
 		void draw() const;
 		int shutdown();
+
+		
+		
 	};
 };

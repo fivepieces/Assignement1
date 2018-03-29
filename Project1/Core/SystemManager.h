@@ -1,13 +1,18 @@
 #pragma once
 #include "Manager.h"
 #include <vector>
+#include "System.h"
 namespace core {
 
-	std::vector<class System*> systems;
+	
 	class SystemManager : public Manager
 	{
-	public:
+		std::vector<class System*> systems;
 		SystemManager();
+
+		static SystemManager* m_instance;
+	public:
+		
 		~SystemManager();
 
 
@@ -15,6 +20,25 @@ namespace core {
 		 void update();
 		 void draw() const;
 		 bool shutdown();
+
+		 static SystemManager* GetInstance()
+		 {
+			 if (m_instance == nullptr)
+			 {
+				 m_instance = new SystemManager;
+			 }
+			 return m_instance;
+		 }
+
+		 System* GetSystem(SystemType t) {
+			 for (System* s : systems)
+			 {
+				 if (s->type == t) {
+					 return s;
+				 }
+				 return nullptr;
+			 }
+		 }
 	};
 
 }

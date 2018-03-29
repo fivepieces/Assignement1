@@ -1,4 +1,5 @@
 #include "GameObject.h"
+#include "MainScene.h"
 
 
 namespace scene {

@@ -12,8 +12,9 @@ namespace core
 	class System
 	{
 	protected:
-		SystemType type;
+		
 	public:
+		SystemType type;
 		System(SystemType st);
 		virtual ~System();
 

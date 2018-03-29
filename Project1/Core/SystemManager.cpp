@@ -5,6 +5,8 @@
 
 namespace core {
 
+	SystemManager* SystemManager::m_instance = NULL;
+
 	SystemManager::SystemManager()
 	{
 
