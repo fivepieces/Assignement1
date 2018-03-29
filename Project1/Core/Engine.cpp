@@ -105,13 +105,12 @@ namespace core {
 
 				switch (e.key.keysym.sym)
 				{
-				//TALIS u said u wanted it to move, not how far ok pls be gentle. I will figure it out soon but im running out of time.
-					//I know the issue is that im moving the picture and then breaking out of the case, but after that im not saving its new position
-					//so when i go back into the case it uses the same variable as before so essentially I can only move 1 frame per direction
 				case SDLK_LEFT:
+					//added comment for github testing
 					std::cout << "Left" << std::endl;
 					SDL_FillRect(screenSurface, NULL, SDL_MapRGB(screenSurface->format, 213, 126, 23));
 					Viewport->x--;
+
 					break;
 
 				case SDL_KEYUP:
