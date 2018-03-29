@@ -111,7 +111,7 @@ namespace core {
 				case SDLK_LEFT:
 					std::cout << "Left" << std::endl;
 					SDL_FillRect(screenSurface, NULL, SDL_MapRGB(screenSurface->format, 213, 126, 23));
-					Viewport->x = SCREEN_WIDTH / 2 - 4;
+					Viewport->x--;
 					break;
 
 				case SDL_KEYUP:
@@ -121,19 +121,19 @@ namespace core {
 				case SDLK_UP:
 					std::cout << "Up" << std::endl;
 					SDL_FillRect(screenSurface, NULL, SDL_MapRGB(screenSurface->format, 213, 126, 23));
-					Viewport->y = SCREEN_HEIGHT / 2 -4;
+					Viewport->y--;
 					break;
 
 				case SDLK_DOWN:
 					std::cout << "Down" << std::endl;
 					SDL_FillRect(screenSurface, NULL, SDL_MapRGB(screenSurface->format, 213, 126, 23));
-					Viewport->y = SCREEN_HEIGHT / 2 + 4;
+					Viewport->y++;
 					break;
 
 				case SDLK_RIGHT:
 					std::cout << "Right" << std::endl;
 					SDL_FillRect(screenSurface, NULL, SDL_MapRGB(screenSurface->format, 213, 126, 23));
-					Viewport->x = SCREEN_WIDTH / 2 + 4;
+					Viewport->x++;
 					break;
 
 				//case SDL_QUIT:
